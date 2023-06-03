@@ -1,0 +1,131 @@
+/**************************************
+- DISPLAY SCORE
+- DISPLAY CHOICES
+- CHOICES PLAYER
+- WINNER MESSAGE (SCRIPT)
+**************************************/	
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--bg-body: orange;
+	--bg-title: #FA3D3D;
+	--bg-displayScoreItem: #ccc;
+	--bg-displayChoices: #FCD79D;
+	--bg-btn-choicesPlayer: #ccc;
+	--hover-btn-choicesPlayer: #FA3D3D;
+	--bg-btnReload: orange;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: sans-serif;
+	background-color: var(--bg-body);
+}
+.container {
+	height: 600px;
+	padding: 1.5rem;
+	text-align: center;
+}
+h1 {
+	padding: 1rem;
+	margin-bottom: 3rem;
+	background-color: var(--bg-title);
+	border-radius: 12px;
+	color: white;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/**************************************
+- DISPLAY SCORE
+**************************************/
+.displayScore {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+.displayScore div {
+	padding: .5rem;
+	background-color: var(--bg-displayScoreItem);
+	border-radius: 12px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.displayScore h2 {
+	margin-bottom: .5rem;
+}
+.displayScore span {
+	font-size: 2rem;
+}
+
+
+/**************************************
+- DISPLAY CHOICES
+**************************************/
+.displayChoices {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 170px;
+	margin-top: 1rem;
+	background-color: var(--bg-displayChoices);
+	border-radius: 12px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.choice-selection {
+	padding: .6rem .8rem;
+	margin: 2rem;
+	font-size: 2.5rem;
+}
+.winner-choice {
+	border: 4px solid black;
+	border-radius: 50%;
+}
+
+
+/**************************************
+- CHOICES PLAYER
+**************************************/
+.choices-player {
+	margin-top: 2rem;
+}
+.choices-player button {
+	padding: .5rem .8rem;
+	margin: .5rem;
+	font-size: 2rem;
+	background-color: var(--bg-btn-choicesPlayer);
+	border: none;
+	border: 1px solid black;	
+	border-radius: 8px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.choices-player button:hover {
+	background-color: var(--hover-btn-choicesPlayer);
+}
+
+
+/**************************************
+- WINNER MESSAGE (SCRIPT)
+**************************************/
+.winner-text {
+	margin-bottom: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: normal;
+	text-transform: capitalize;
+}
+.btnReload {
+	padding: 1rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: var(--bg-btnReload);
+	border: none;
+	border-radius: 8px;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
